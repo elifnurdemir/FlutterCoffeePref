@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    home: Home()
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: const Text("Widget Ağacı")),
-        body: const Align(child: Text("Flutter öğreniyorum!")),
-      ),
-    );
-  }
-}
