@@ -22,6 +22,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/img/dog.jpeg
+    - assets/img/coffee.jpg
     - assets/img/mini.jpg
     - assets/img/bg.jpg

@@ -8,7 +8,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('elifin appbarı', style: TextStyle(
+        title: Text('KAHVEHANE', style: TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.bold
         ),),
@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
           Container(
             color: Colors.red[200],
             padding: const EdgeInsets.all(20),
-            child: const Text('ay oldu mu acaba?!'),
+            child: const Text('Kahvenizi nasıl alırdınız?'),
           ),
           Container(
             color: Colors.red[100],
