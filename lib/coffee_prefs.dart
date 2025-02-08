@@ -8,55 +8,58 @@ class CoffeePrefs extends StatefulWidget {
 }
 
 class _CoffeePrefsState extends State<CoffeePrefs> {
-  int strength  =1;
-  int sugars =1;
+  int strength = 1;
+  int sugars = 1;
 
   void increaseStrength() {
     setState(() {
       strength = strength < 5 ? strength + 1 : 1;
     });
   }
- void increaseSugars(){
+
+  void increaseSugars() {
     setState(() {
       sugars = sugars < 5 ? sugars + 1 : 1;
     });
- }
+  }
 
- @override
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Row(
           children: [
-           const Text('Sertlik: '),
-            for(int i = 0; i < strength; i++)
-              Image.asset('assets/img/coffee.jpg',
+            const Text('Sertlik: '),
+            for (int i = 0; i < strength; i++)
+              Image.asset(
+                'assets/img/coffee.jpg',
                 width: 25,
                 color: Colors.red[100],
                 colorBlendMode: BlendMode.multiply,
               ),
             const Expanded(child: SizedBox()),
-          FilledButton(
-              onPressed:increaseStrength,
-              style: FilledButton.styleFrom(
-                backgroundColor:Colors.brown ,
-                foregroundColor:Colors.white ,
-              ),
-              child: const Text('+'))
+            FilledButton(
+                onPressed: increaseStrength,
+                style: FilledButton.styleFrom(
+                  backgroundColor: Colors.brown,
+                  foregroundColor: Colors.white,
+                ),
+                child: const Text('+'))
           ],
         ),
         Row(
           children: [
-           const Text('Tatlılık: '),
-            for(int i = 0; i < sugars; i++)
-              Image.asset('assets/img/mini.jpg',
+            const Text('Tatlılık: '),
+            for (int i = 0; i < sugars; i++)
+              Image.asset(
+                'assets/img/mini.jpg',
                 width: 25,
                 color: Colors.red[100],
                 colorBlendMode: BlendMode.multiply,
               ),
             const Expanded(child: SizedBox()),
             ElevatedButton(
-                onPressed:increaseSugars,
+                onPressed: increaseSugars,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.brown,
                   foregroundColor: Colors.white,
