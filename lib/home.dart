@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/coffee_prefs.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -7,11 +8,29 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('elifin appbarı'),
-        backgroundColor: Colors.blue[300],
+        title: Text('elifin appbarı', style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold
+        ),),
+        backgroundColor: Colors.red[300],
         centerTitle: true,
       ),
-      body: const Text('Helloo'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Container(
+            color: Colors.red[200],
+            padding: const EdgeInsets.all(20),
+            child: const Text('ay oldu mu acaba?!'),
+          ),
+          Container(
+            color: Colors.red[100],
+            padding: const EdgeInsets.all(20),
+            child: const CoffeePrefs(),
+          ),
+
+        ],
+      ),
     );
   }
 }
