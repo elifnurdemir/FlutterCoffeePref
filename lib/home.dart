@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/coffee_prefs.dart';
+import 'package:music_player/styled_body_text.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -12,19 +13,19 @@ class Home extends StatelessWidget {
           color: Colors.white,
           fontWeight: FontWeight.bold
         ),),
-        backgroundColor: Colors.red[300],
+        backgroundColor: Colors.brown[700],
         centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            color: Colors.red[200],
+            color: Colors.brown[200],
             padding: const EdgeInsets.all(20),
-            child: const Text('Kahvenizi nasıl alırdınız?'),
+            child: StyledBodyText('Kahvenizi nasıl alırdınız?')
           ),
           Container(
-            color: Colors.red[100],
+            color: Colors.brown[100],
             padding: const EdgeInsets.all(20),
             child: const CoffeePrefs(),
           ),
